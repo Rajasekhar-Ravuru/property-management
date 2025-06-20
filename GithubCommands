@@ -1,0 +1,17 @@
+# Step 1: Initialize the repository (if not already done)
+git init
+
+# Step 2: Add all project files to staging
+git add .
+
+# Step 3: Commit with a message
+git commit -m "Initial commit"
+
+# Step 4: Set your GitHub repository URL (without exposing your token)
+git remote add origin https://github.com/Rajasekhar-Ravuru/property-management.git
+
+# Step 5: Rename the branch to main (optional but recommended)
+git branch -M main
+
+# Step 6: Push your code to GitHub
+git push -u origin main
