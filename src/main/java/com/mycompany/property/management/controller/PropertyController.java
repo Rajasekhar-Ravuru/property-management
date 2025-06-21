@@ -74,21 +74,21 @@ public class PropertyController {
         return responseEntity;
     }
 
-    @PatchMapping("/properties/update-ownerNameProperty/{propertyId}")
-    public ResponseEntity<PropertyDTO> updatePropertyOwnerName(@RequestBody PropertyDTO propertyDTO, @PathVariable Long propertyId){
-        propertyDTO = propertyService.updatePropertyOwnerName(propertyDTO, propertyId);
+//    @PatchMapping("/properties/update-ownerNameProperty/{propertyId}")
+//    public ResponseEntity<PropertyDTO> updatePropertyOwnerName(@RequestBody PropertyDTO propertyDTO, @PathVariable Long propertyId){
+//        propertyDTO = propertyService.updatePropertyOwnerName(propertyDTO, propertyId);
+//
+//        ResponseEntity<PropertyDTO> responseEntity = new ResponseEntity<>(propertyDTO, HttpStatus.OK);
+//        return responseEntity;
+//    }
 
-        ResponseEntity<PropertyDTO> responseEntity = new ResponseEntity<>(propertyDTO, HttpStatus.OK);
-        return responseEntity;
-    }
-
-    @PatchMapping("/properties/update-ownerEmailProperty/{propertyId}")
-    public ResponseEntity<PropertyDTO> updatePropertyOwnerEmail(@RequestBody PropertyDTO propertyDTO, @PathVariable Long propertyId){
-        propertyDTO = propertyService.updatePropertyOwnerEmail(propertyDTO, propertyId);
-
-        ResponseEntity<PropertyDTO> responseEntity = new ResponseEntity<>(propertyDTO, HttpStatus.OK);
-        return responseEntity;
-    }
+//    @PatchMapping("/properties/update-ownerEmailProperty/{propertyId}")
+//    public ResponseEntity<PropertyDTO> updatePropertyOwnerEmail(@RequestBody PropertyDTO propertyDTO, @PathVariable Long propertyId){
+//        propertyDTO = propertyService.updatePropertyOwnerEmail(propertyDTO, propertyId);
+//
+//        ResponseEntity<PropertyDTO> responseEntity = new ResponseEntity<>(propertyDTO, HttpStatus.OK);
+//        return responseEntity;
+//    }
 
     @PatchMapping("/properties/update-PriceProperty/{propertyId}")
     public ResponseEntity<PropertyDTO> updatePropertyPrice(@RequestBody PropertyDTO propertyDTO, @PathVariable Long propertyId){

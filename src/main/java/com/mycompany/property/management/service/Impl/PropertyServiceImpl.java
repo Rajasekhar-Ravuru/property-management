@@ -55,8 +55,8 @@ public class PropertyServiceImpl implements PropertyService {
             PropertyEntity pe = optEn.get();
             pe.setTitle(propertyDTO.getTitle());
             pe.setAddress(propertyDTO.getAddress());
-            pe.setOwnerEmail(propertyDTO.getOwnerEmail());
-            pe.setOwnerName(propertyDTO.getOwnerName());
+//            pe.setOwnerEmail(propertyDTO.getOwnerEmail());
+//            pe.setOwnerName(propertyDTO.getOwnerName());
             pe.setPrice(propertyDTO.getPrice());
             pe.setDescription(propertyDTO.getDescription());
 
@@ -95,33 +95,33 @@ public class PropertyServiceImpl implements PropertyService {
         return dto;
     }
 
-    @Override
-    public PropertyDTO updatePropertyOwnerName(PropertyDTO propertyDTO, Long propertyId) {
-        Optional<PropertyEntity> optEn = propertyRepository.findById(propertyId);
-        PropertyDTO dto = null;
+//    @Override
+//    public PropertyDTO updatePropertyOwnerName(PropertyDTO propertyDTO, Long propertyId) {
+//        Optional<PropertyEntity> optEn = propertyRepository.findById(propertyId);
+//        PropertyDTO dto = null;
+//
+//        if (optEn.isPresent()) {
+//            PropertyEntity pe = optEn.get();
+//            pe.setOwnerName(propertyDTO.getOwnerName());
+//            dto = propertyConverter.convertEntityToDTO(pe);
+//            propertyRepository.save(pe);
+//        }
+//        return dto;
+//    }
 
-        if (optEn.isPresent()) {
-            PropertyEntity pe = optEn.get();
-            pe.setOwnerName(propertyDTO.getOwnerName());
-            dto = propertyConverter.convertEntityToDTO(pe);
-            propertyRepository.save(pe);
-        }
-        return dto;
-    }
-
-    @Override
-    public PropertyDTO updatePropertyOwnerEmail(PropertyDTO propertyDTO, Long propertyId) {
-        Optional<PropertyEntity> optEn = propertyRepository.findById(propertyId);
-        PropertyDTO dto = null;
-
-        if (optEn.isPresent()) {
-            PropertyEntity pe = optEn.get();
-            pe.setOwnerEmail(propertyDTO.getOwnerEmail());
-            dto = propertyConverter.convertEntityToDTO(pe);
-            propertyRepository.save(pe);
-        }
-        return dto;
-    }
+//    @Override
+//    public PropertyDTO updatePropertyOwnerEmail(PropertyDTO propertyDTO, Long propertyId) {
+//        Optional<PropertyEntity> optEn = propertyRepository.findById(propertyId);
+//        PropertyDTO dto = null;
+//
+//        if (optEn.isPresent()) {
+//            PropertyEntity pe = optEn.get();
+//            pe.setOwnerEmail(propertyDTO.getOwnerEmail());
+//            dto = propertyConverter.convertEntityToDTO(pe);
+//            propertyRepository.save(pe);
+//        }
+//        return dto;
+//    }
 
 
     @Override
