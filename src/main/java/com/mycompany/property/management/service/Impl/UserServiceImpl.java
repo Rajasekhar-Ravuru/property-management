@@ -53,7 +53,7 @@ public class UserServiceImpl implements UserService {
             List<ErrorModel> errorModelList = new ArrayList<>();
             ErrorModel errorModel = new ErrorModel();
             errorModel.setCode("INVALID_LOGIN");
-            errorModel.setMessage("Incorrect Email of Password");
+            errorModel.setMessage("Incorrect Email or Password");
             errorModelList.add(errorModel);
 
            throw new BusinessException(errorModelList);
